@@ -35,47 +35,47 @@ just download lib folder and add into your project
 
 # Screenshot
 
-- ZoomIn effect
+- ZoomOut effect
 
 <img src="Screenshots/screenshot01.gif" width="320">
 
-- ZoomOut effect
+- ZoomIn effect
 
 <img src="Screenshots/screenshot02.gif" width="320">
 
-- FlipUp effect
+- Dissolve effect
 
 <img src="Screenshots/screenshot03.gif" width="320">
 
-- FlipDown effect
+- SliceVertical effect
 
 <img src="Screenshots/screenshot04.gif" width="320">
 
-- ZoomIn effect
+- SliceHorizontal effect
 
 <img src="Screenshots/screenshot05.gif" width="320">
 
-- ZoomOut effect
+- FlipFromLeft effect
 
 <img src="Screenshots/screenshot06.gif" width="320">
 
-- FlipUp effect
+- FlipFromRight effect
 
 <img src="Screenshots/screenshot07.gif" width="320">
 
-- FlipDown effect
+- FlipFromTop effect
 
 <img src="Screenshots/screenshot08.gif" width="320">
 
-- ZoomIn effect
+- FlipFromBottom effect
 
 <img src="Screenshots/screenshot09.gif" width="320">
 
-- ZoomOut effect
+- CurlUp effect
 
 <img src="Screenshots/screenshot10.gif" width="320">
 
-- FlipUp effect
+- CurlDown effect
 
 <img src="Screenshots/screenshot11.gif" width="320">
 
