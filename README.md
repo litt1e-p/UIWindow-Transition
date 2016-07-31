@@ -4,7 +4,22 @@ UIWindow transition effect while change window's rootViewController
 # Usage
 
 ```swift
-
+UIApplication.sharedApplication().keyWindow?.transitRootVc(yourTabBarTwoController(), style: transitionType, duration: nil)
+/* there are 11 kinds of transition effects
+transitionType:  None, 
+                 ZoomOut,
+                 ZoomIn,
+                 Dissolve,
+                 SliceVertical,
+                 SliceHorizontal,
+                 FlipFromLeft,
+                 FlipFromRight,
+                 FlipFromTop,
+                 FlipFromBottom,
+                 CurlUp,
+                 CurlDown,
+                 Random
+  */
 ```
 
 # Install
