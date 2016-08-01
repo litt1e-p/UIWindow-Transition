@@ -1,5 +1,5 @@
 # UIWindow-Transition
-UIWindow transition effect while change window's rootViewController
+UIWindow transition effects while changing window's rootViewController
 
 # Usage
 
