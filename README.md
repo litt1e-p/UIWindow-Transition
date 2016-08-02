@@ -5,7 +5,7 @@ UIWindow transition effects while changing window's rootViewController
 
 ```swift
 UIApplication.sharedApplication().keyWindow?.transitRootVc(yourTabBarTwoController(), style: transitionType, duration: nil)
-/* there are 11 kinds of transition effects
+/* there are 11 kinds of transition effects, .None effect and .Random effect are also available
 transitionType:  None, 
                  ZoomOut,
                  ZoomIn,
