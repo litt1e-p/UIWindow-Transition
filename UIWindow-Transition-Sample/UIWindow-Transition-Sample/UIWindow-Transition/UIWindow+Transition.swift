@@ -71,7 +71,7 @@ public extension UIWindow
         let durationMax = duration ?? 0.50
         switch style {
         case .ZoomOut:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {() in
@@ -82,7 +82,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .ZoomIn:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMax, animations: {() in
@@ -93,7 +93,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .Dissolve:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {
@@ -177,11 +177,11 @@ public extension UIWindow
     private func clipImage(view: UIView, rect: CGRect) -> UIImage {
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        CGContextSaveGState(context)
+        CGContextSaveGState(context!)
         UIRectClip(rect)
         view.layer.renderInContext(context!)
         let output = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return output
+        return output!
     }
 }
