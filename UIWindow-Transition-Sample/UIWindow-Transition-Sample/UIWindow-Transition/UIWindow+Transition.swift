@@ -43,7 +43,7 @@ public enum WindowRootVcTransitionStyle: UInt
 public extension UIWindow
 {
     public func transitRootVc(rootVc: UIViewController, style: WindowRootVcTransitionStyle?, duration: NSTimeInterval?) {
-        var finalStyle = style ?? .Random
+        var finalStyle: WindowRootVcTransitionStyle = style != nil ? style! : .Random
         if finalStyle == .Random {
             var randomInt: UInt = 0
             arc4random_buf(&randomInt, 11)
@@ -53,7 +53,7 @@ public extension UIWindow
     }
     
     public func transitRootVc(identifier: String, style: WindowRootVcTransitionStyle?, duration: NSTimeInterval?) {
-        var finalStyle = style ?? .Random
+        var finalStyle: WindowRootVcTransitionStyle = style != nil ? style! : .Random
         if finalStyle == .Random {
             var randomInt: UInt = 0
             arc4random_buf(&randomInt, 11)
@@ -67,11 +67,11 @@ public extension UIWindow
     }
     
     private func transitAnimation(toVc: UIViewController, style: WindowRootVcTransitionStyle, duration: NSTimeInterval?) {
-        let durationMin = duration ?? 0.25
-        let durationMax = duration ?? 0.50
+        let durationMin: NSTimeInterval = duration != nil ? duration! : 0.25
+        let durationMax: NSTimeInterval = duration != nil ? duration! : 0.50
         switch style {
         case .ZoomOut:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {() in
@@ -82,7 +82,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .ZoomIn:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMax, animations: {() in
@@ -93,7 +93,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .Dissolve:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {
