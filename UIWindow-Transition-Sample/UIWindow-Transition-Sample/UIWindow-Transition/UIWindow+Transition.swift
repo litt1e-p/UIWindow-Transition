@@ -71,7 +71,7 @@ public extension UIWindow
         let durationMax: NSTimeInterval = duration != nil ? duration! : 0.50
         switch style {
         case .ZoomOut:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {() in
@@ -82,7 +82,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .ZoomIn:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMax, animations: {() in
@@ -93,7 +93,7 @@ public extension UIWindow
                     snapshot.removeFromSuperview()
             })
         case .Dissolve:
-            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)
+            let snapshot:UIView = snapshotViewAfterScreenUpdates(true)!
             toVc.view.addSubview(snapshot)
             rootViewController = toVc
             UIView.animateWithDuration(durationMin, animations: {
