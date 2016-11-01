@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "UIWindow-Transition"
-  s.version          = "0.0.1"
+  s.version          = "1.0.0"
   s.summary          = "UIWindow transition effect while change window's rootViewController"
   s.description      = <<-DESC
                        an extension of UIWindow for the transition effect of changing window's rootViewController
