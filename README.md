@@ -26,7 +26,7 @@ transitionType:  None,
 
 - use cocoapods
 ```swift
-pod 'UIWindow-Transition', '~> 0.0.1'
+pod 'UIWindow-Transition', '~> 0.0.2'
 ```
 - manual import
 ```swift
