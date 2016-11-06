@@ -81,6 +81,10 @@ just download lib folder and add into your project
 
 # Release notes
 
+- 0.0.2
+
+`swift 3 compatible`
+
 - 0.0.1
 
 `release first version.`
